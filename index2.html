@@ -36,6 +36,7 @@
             padding:0 10px;
         } 
         .item-sec{
+            max-height:300px;
             position:relative;
             margin-bottom:10px;
             overflow:hidden;
@@ -96,6 +97,8 @@
         }
 
         .wrap{            
+            max-width:1980px;
+            margin:0 auto;
             overflow:hidden;
         }
         .header{
@@ -543,6 +546,10 @@
 
         /* 테블릿 스타일 */
         @media (min-width:768px){
+            .item-sec
+            {
+                max-height:400px;
+            }
             .item-sec .inner{
                 padding-top:20px;
             }
@@ -642,6 +649,11 @@
             .item-sec .container{
                 left:50%;
                 transform:translateX(-50%);
+            }
+
+            .item-sec
+            {
+                max-width:initial;
             }
             .item-sec .inner{
                 padding-top:30px;
