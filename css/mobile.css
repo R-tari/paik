@@ -506,15 +506,4 @@
 
 
 
-@media (min-width:540px){
-    .fran-store h3{                
-        font-size:1.8em;                
-    }
-    .fran-store .inner>div{
-        padding:16px;
-        height:320px;
-    }
-    .fran-store p{
-        margin-bottom:120px;
-    }
-}
+

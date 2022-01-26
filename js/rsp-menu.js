@@ -2,7 +2,7 @@ $('.btn-nav').on({
     'click':function(){
         $('.nav').toggleClass('active');                
     }
-});
+})
 $('.main-nav>li').on({
     'click':function(){ 
         $('.main-nav>li').not($(this)).children('.sub-nav').slideUp(200);
@@ -11,10 +11,5 @@ $('.main-nav>li').on({
         $(this).toggleClass('active');
 
     }
-}); 
-
-$('.f-site').on({
-    'click':function(){
-        $('.f-list').slideToggle(200);
-    }
 })
+
