@@ -4,52 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>빽다방</title>
     <style>
-        *
-        {
-            box-sizing: border-box;
-            margin: 0;
-            padding:0;
-
+        *{box-sizing:border-box;margin: 0;padding:0;}
+        img{width:100%;vertical-align:top;}
+        .container{
+            margin:0 16px;           
         }
-
-        img
-        {
-            width:100%;
-            vertical-align: top;
-        }
-        .container
-        {
-            margin:0 16px;
-        }
-
-        .flex-container
-        {
+        /* flex */
+        .flex-container{
             display:flex;
             flex-flow:row wrap;
-            justify-content: space-between;
+            justify-content:space-between;            
         }
-        .flex-container section
-        {
+        .flex-container section{
             width:100%;
             margin-bottom:10px;
         }
-
-        .flex-container section.main-slider
-        {
+        .flex-container section.main-slider{
             margin-bottom:0;
         }
-        .flex-container section.coffee-story
-        {
+        .flex-container section.coffee-story{
             height:30vw;
-            
             margin-bottom:5px;
             position:relative;
-            overflow:hidden;
+            overflow: hidden;
         }
-        .flex-container section.coffee-story img
-        {
+        .flex-container section.coffee-story img{
             position:absolute;
             left:50%;
             top:50%;
@@ -57,27 +38,20 @@
             width:auto;
             height:100%;
         }
-
-        .fran-store
-        {
+        .fran-STORE{
             display:flex;
             flex-flow:row wrap;
+            justify-content:space-between;
         }
-
-        .fran-store article
-        {
+        .fran-STORE article{
             width:calc(50% - 5px);
             border:1px solid black;
         }
-        
-        section.pos-re
-        {
+
+        section.pos-re{
             position:relative;
-
         }
-
-        .contents
-        {
+        .contents{
             position:absolute;
             left:10px;
             right:10px;
@@ -87,142 +61,110 @@
             flex-flow:column nowrap;
             justify-content: space-between;
         }
-
-        .contents .btn-box
-        {
+        .contents .btn-box{
             width:50px;
             height:50px;
-            background-color: black;
             border-radius:50%;
+            background-color:black;
             align-self:flex-end;
         }
-
-        .contents h2
-        {
+        .contents h2{
             margin-bottom:5px;
         }
 
-        @media (min-width:768px)
-        {
-            .flex-container section.fresh-coffee,.flex-container section.beverage
-            {
+        @media (min-width:768px){
+            .flex-container section.fresh-coffee,
+            .flex-container section.BEVERAGE{
                 width:calc(50% - 5px);
             }
-
-            .flex-container section.ccino
-            {
-               width:calc(33.3333333333333333% - 5px);
-            }
-            .flex-container section.dessert
-            {
-                width:calc(66.666666666666667% - 5px);
-            }  
-
-            .flex-container section.fran-store
-            {
-               width:calc(66.666666666666667% - 5px);
-            }
-            .flex-container section.sns
-            {
+            .flex-container section.CCINO{
                 width:calc(33.33333333333333% - 5px);
-            }  
-    
-            .fran-store article
-            {
+            }
+            .flex-container section.DESSERT{
+                width:calc(66.66666666666667% - 5px);
+            }
+            .flex-container section.fran-STORE{
+                width:calc(66.66666666666667% - 5px);
+            }
+
+            .flex-container section.SNS{
+                width:calc(33.33333333333333% - 5px);
+            }
+            .fran-STORE article{
                 width:100%;
             }
-
-            .fran-store article:first-child
-            {
+            .fran-STORE article:first-child{
                 margin-bottom:10px;
             }
-
-            .contents .btn-box
-            {
+            .contents .btn-box{
                 align-self:flex-start;
             }
-
-
-
-    
         }
     </style>
 </head>
 <body>
     <div class="wrap">
         <header>
-            <div class="container">
-                headder
-            </div>
+            <div class="container">HEADER</div>            
         </header>
         <main>
             <div class="container">
-                <div class="grid-container flex-container">
+                <div class="flex-container grid-container">
                     <section class="main-slider">
                         <img src="./images/mmain-banner01.jpg" alt="banner">
                     </section>
                     <section class="coffee-story">
-                        <img src="./images/main_sec1.jpg" alt="story">
+                        <img src="./images/main_sec1.jpg" alt="">
                     </section>
                     <section class="fresh-coffee pos-re">
-                        <img src="./images/mmain_sec2.jpg" alt="coffee">
+                        <img src="./images/mmain_sec2.jpg" alt="">
                         <div class="contents">
                             <div class="txt-box">
                                 <h2>제목</h2>
                                 <p>내용</p>
                             </div>
                             <div class="btn-box">
-                                <div class="btn-rotate">
-
-                                </div>
+                                <div class="btn-rotate"></div>
                             </div>
                         </div>
                     </section>
-                    <section class="beverage pos-re">
-                        <img src="./images/mmain_sec3.jpg" alt="beverage">
-
+                    <section class="BEVERAGE  pos-re">
+                        <img src="./images/mmain_sec3.jpg" alt="">
                         <div class="contents">
                             <div class="txt-box">
                                 <h2>제목</h2>
                                 <p>내용</p>
                             </div>
                             <div class="btn-box">
-                                <div class="btn-rotate">
-
-                                </div>
+                                <div class="btn-rotate"></div>
                             </div>
                         </div>
-                        
                     </section>
-                    <section class="ccino pos-re">
-                        <img src="./images/mmain_sec4.jpg" alt="ccino">
+                    <section class="CCINO  pos-re">
+                        <img src="./images/mmain_sec4.jpg" alt="">
                         <div class="contents">
                             <div class="txt-box">
                                 <h2>제목</h2>
                                 <p>내용</p>
                             </div>
                             <div class="btn-box">
-                                <div class="btn-rotate">
-
-                                </div>
+                                <div class="btn-rotate"></div>
                             </div>
                         </div>
                     </section>
-                    <section class="dessert pos-re">
-                        <img src="./images/mmain_sec5.jpg" alt="dessert">
+                    <section class="DESSERT  pos-re">
+                        <img src="./images/mmain_sec5.jpg" alt="">
                         <div class="contents">
                             <div class="txt-box">
                                 <h2>제목</h2>
                                 <p>내용</p>
                             </div>
                             <div class="btn-box">
-                                <div class="btn-rotate">
-
-                                </div>
+                                <div class="btn-rotate"></div>
                             </div>
                         </div>
                     </section>
-                    <section class="fran-store">
+                    <section class="fran-STORE">
                         <article>
                             FRAN
                         </article>
@@ -230,18 +172,14 @@
                             STORE
                         </article>
                     </section>
-                    <section class="sns">
+                    <section class="SNS">
                         SNS
-                    </section>                
+                    </section>
                 </div>
-
-                
             </div>
         </main>
         <footer>
-            <div class="container">
-                footer
-            </div>
+            <div class="container">FOOTER</div>            
         </footer>
     </div>
 </body>
