@@ -1,10 +1,12 @@
+@charset 'utf-8';
+
 .sub-main{
     border-bottom:2px solid #ff0;
     padding-top:70px;            
 }    
 .sub-top{
     padding:150px 0 50px;
-    background:url(../images/bg-about.jpg)no-repeat center;
+    background:url(../images/bg-about.jpg) no-repeat center;
     background-size:cover;
 }
 .sub-top .inner{
@@ -53,7 +55,7 @@
         width:80%;
     }
     .btn-sub ul li{
-        width:33.3333%;
+        width:20%;
         border:1px solid rgba(0,0,0,0.3); 
         border-right:none;
     }

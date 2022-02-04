@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 .sub-bottom{
     padding:70px 0;
 }
@@ -92,8 +94,9 @@
 .ceo .img-box{
     width:40%;
 }
-
 @media (min-width:960px){
+    
+
     .sub-bottom .contents>div{
         width:calc(50% - 24px);
     }
