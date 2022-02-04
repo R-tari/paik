@@ -27,11 +27,67 @@
     <title>빽다방</title>
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/sub-default.css">
-    <link rel="stylesheet" href="./css/menu.css">
+    
     
     
     <style>
-        
+        .table{            
+            border-top:3px solid #071f60;            
+        }
+        .table>li{
+            border-bottom:1px solid #000;
+            padding:26px 0;
+        }
+        .table>.table-head{
+            font-weight:700;
+        }
+        .table>.list:hover{
+            background-color:#071f60;
+            color:#fff;
+        }
+        .table ul{
+            display:flex;
+        }      
+        .table ul li{
+            text-align:center;
+        }
+        .num{
+            flex:1;
+            display:none;
+        }
+        .sub-class{
+            flex:1;
+            margin-right:16px;
+        }
+        .title{
+            flex:6;
+        }
+        .list .title{
+            text-align:left;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            cursor: pointer;
+        }
+        .date{
+            flex:2;
+            display:none;
+        }
+        .view{
+            flex:2;
+            display:none;
+        }
+
+        @media (min-width:768px){
+            .date{         
+                display:block;
+            }  
+        }
+        @media (min-width:960px){
+            .num,.view{
+                display:block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -153,17 +209,15 @@
                 <div class="container">
                     <div class="inner">
                         <div class="txt">
-                            <h2 id="menu-tit">신메뉴</h2>
+                            <h2 id="notice-tit">소식</h2>
                             <hr>
-                            <p id="menu-txt">지금 바로 가까운 매장에서 빽다방 신메뉴를 만나 보실 수 있습니다.</p>
+                            <p id="notice-txt">다양한 이벤트와 새로운 소식을 확인하세요!</p>
                         </div>
                         <div class="btn-sub">
                             <ul>
-                                <li class="active">신메뉴</li>
-                                <li>커피</li>
-                                <li>음료</li>
-                                <li>아이스크림/디저트</li>
-                                <li>빽스치노</li>
+                                <li class="active">소식</li>
+                                <li>이벤트</li>
+                                <li>친절우수매장</li>                                
                             </ul>
                         </div>
                     </div>
@@ -172,68 +226,107 @@
             <section class="sec sub-bottom">
                 <div class="container">
                     <div class="inner" id="sub-bottom-inner">
-                        <div>
-                            <h2>추천메뉴</h2>
-                            
-                            <div class="swiper">
-                                <!-- Additional required wrapper -->
-                                <div class="swiper-wrapper">
-                                    <!-- Slides -->
-                                    <div class="swiper-slide">
-                                        <div class="img-box">
-                                            <img src="./images/img-new01.png" alt="콜드브루">
-                                        </div>
-                                        <h3>콜드브루</h3>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="img-box">
-                                            <img src="./images/img-new02.png" alt="콜드브루라떼">
-                                        </div>
-                                        <h3>콜드브루라떼</h3>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="img-box">
-                                            <img src="./images/img-new03.png" alt="콜드브루연유라떼">
-                                        </div>
-                                        <h3>콜드브루연유라떼</h3>
-                                    </div>                                
-                                </div>                            
-                            
-                                <!-- If we need navigation buttons -->
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            
-                            </div>
-
-                            <div class="menu-list">
+                        <ul class="table">
+                            <li class="table-head">
                                 <ul>
-                                    <li>
-                                        <div class="img-box">
-                                            <img src="./images/img-new01.png" alt="콜드브루">
-                                        </div>
-                                        <h3>콜드브루</h3>
-                                    </li>
-                                    <li>
-                                        <div class="img-box">
-                                            <img src="./images/img-new02.png" alt="콜드브루라떼">
-                                        </div>
-                                        <h3>콜드브루라떼</h3>
-                                    </li>
-                                    <li>
-                                        <div class="img-box">
-                                            <img src="./images/img-new03.png" alt="콜드브루연유라떼">
-                                        </div>
-                                        <h3>콜드브루연유라떼</h3>
-                                    </li>
-                                    <li>
-                                        <div class="img-box">
-                                            <img src="./images/img-coffee01.png" alt="신메뉴1">
-                                        </div>
-                                        <h3>에스프레소</h3>
-                                    </li>
+                                    <li class="num">번호</li>
+                                    <li class="sub-class">분류</li>
+                                    <li class="title">제목</li>
+                                    <li class="date">등록일</li>
+                                    <li class="view">조회수</li>
                                 </ul>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="list list01">
+                                <ul>
+                                    <li class="num">100</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">장시간 저온숙성해 맛과 향이 더욱 진한 콜드브루</li>
+                                    <li class="date">2022-02-04</li>
+                                    <li class="view">50</li>
+                                </ul>
+                            </li>
+                            <li class="list list02">
+                                <ul>
+                                    <li class="num">99</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">호랑이 기운이 쑥쑥, ‘쑥쑥라떼’, ‘쑥쑥빽스치노’ 출시</li>
+                                    <li class="date">2022-02-04</li>
+                                    <li class="view">99</li>
+                                </ul>
+                            </li>
+                            <li class="list list03">
+                                <ul>
+                                    <li class="num">98</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">2022 캘린더 한정수량 증정!</li>
+                                    <li class="date">2022-01-22</li>
+                                    <li class="view">300</li>
+                                </ul>
+                            </li>
+                            <li class="list list04">
+                                <ul>
+                                    <li class="num">98</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">12곡으로 든든하고 흑당으로 더 달콤한, 마시는 호떡음료 출시</li>
+                                    <li class="date">2022-1-02</li>
+                                    <li class="view">300</li>
+                                </ul>
+                            </li>
+                            <li class="list list05">
+                                <ul>
+                                    <li class="num">96</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">장시간 저온숙성해 맛과 향이 더욱 진한 콜드브루</li>
+                                    <li class="date">2021-12-31</li>
+                                    <li class="view">400</li>
+                                </ul>
+                            </li>
+                            <li class="list list06">
+                                <ul>
+                                    <li class="num">95</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">장시간 저온숙성해 맛과 향이 더욱 진한 콜드브루</li>
+                                    <li class="date">2021-12-25</li>
+                                    <li class="view">500</li>
+                                </ul>
+                            </li>
+                            <li class="list list07">
+                                <ul>
+                                    <li class="num">94</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">장시간 저온숙성해 맛과 향이 더욱 진한 콜드브루</li>
+                                    <li class="date">2021-12-20</li>
+                                    <li class="view">600</li>
+                                </ul>
+                            </li>
+                            <li class="list list08">
+                                <ul>
+                                    <li class="num">100</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">장시간 저온숙성해 맛과 향이 더욱 진한 콜드브루</li>
+                                    <li class="date">2021-12-20</li>
+                                    <li class="view">604</li>
+                                </ul>
+                            </li>
+                            <li class="list list09">
+                                <ul>
+                                    <li class="num">92</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">장시간 저온숙성해 맛과 향이 더욱 진한 콜드브루</li>
+                                    <li class="date">2021-12-14</li>
+                                    <li class="view">700</li>
+                                </ul>
+                            </li>
+                            <li class="list list10">
+                                <ul>
+                                    <li class="num">91</li>
+                                    <li class="sub-class">소식</li>
+                                    <li class="title">장시간 저온숙성해 맛과 향이 더욱 진한 콜드브루</li>
+                                    <li class="date">2021-12-10</li>
+                                    <li class="view">900</li>
+                                </ul>
+                            </li>                            
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -314,57 +407,24 @@
         })
         
         
-        // 스와이퍼슬라이드
-        let swiper = new Swiper('.swiper', {            
-                // 슬라이더 기본설정
-                slidesPerView: 1,
-                spaceBetween:24,
-
-                // 반응형포인트
-                breakpoints:{
-                    640:{
-                        slidesPerView: 2,
-                    },
-                    768:{
-                        slidesPerView: 2.5,
-                    },
-                    960:{
-                        slidesPerView: 3,
-                    },
-                },
-
-                // 내비게이션 버튼
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            });
         
 
         $('.sub-nav a,.btn-sub li').on({
             'click':function(){
                 let target = $(this).text();
-                if(target=='신메뉴'){
-                    $('#menu-tit').load('./db/menu.txt #menu-tit01');
-                    $('#menu-txt').load('./db/menu.txt #menu-txt01');
-                    $('#sub-bottom-inner').load('./db/menu.txt #menu-content01');
-                }else if(target=='커피'){
-                    $('#menu-tit').load('./db/menu.txt #menu-tit02');
-                    $('#menu-txt').load('./db/menu.txt #menu-txt02');
-                    $('#sub-bottom-inner').load('./db/menu.txt #menu-content02');
-                }else if(target=='음료'){
-                    $('#menu-tit').load('./db/menu.txt #menu-tit03');
-                    $('#menu-txt').load('./db/menu.txt #menu-txt03');
-                    $('#sub-bottom-inner').load('./db/menu.txt #menu-content03');
-                }else if(target=='아이스크림/디저트'){
-                    $('#menu-tit').load('./db/menu.txt #menu-tit04');
-                    $('#menu-txt').load('./db/menu.txt #menu-txt04');
-                    $('#sub-bottom-inner').load('./db/menu.txt #menu-content04');
-                }else if(target=='빽스치노'){
-                    $('#menu-tit').load('./db/menu.txt #menu-tit05');
-                    $('#menu-txt').load('./db/menu.txt #menu-txt05');
-                    $('#sub-bottom-inner').load('./db/menu.txt #menu-content05');
-                }                                     
+                if(target=='소식'){
+                    $('.sub-top .txt').load('./db/notice.txt #notice01');
+                    $('#sub-bottom-inner').load('./db/notice.txt .table01');
+                    
+                }else if(target=='이벤트'){
+                    $('.sub-top .txt').load('./db/notice.txt #notice02');
+                    $('#sub-bottom-inner').load('./db/notice.txt .table02');
+                   
+                }else if(target=='친절우수매장'){
+                    $('.sub-top .txt').load('./db/notice.txt #notice03');
+                    $('#sub-bottom-inner').load('./db/notice.txt .table03');
+                    
+                }                    
             }
         })  
     </script>
